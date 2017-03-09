@@ -1,0 +1,7 @@
+<h1>タイトル一覧</h1>
+<ul>
+	<% @articles.each do |article| %>
+		<li><span><%= link_to article.title, article_path(article.id) %></span></li>
+	<% end %>
+</ul>
+<%= link_to "投稿する", articles_new_path %>
